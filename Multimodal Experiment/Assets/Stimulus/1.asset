@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: 1
   m_EditorClassIdentifier: 
   videoClip: {fileID: 32900000, guid: ec5cd9c4e2962e748a96d518f8d628c9, type: 3}
-  hapticTimeline: {fileID: 11400000, guid: 4fc1671eeb383e946bf3ac251cbdb959, type: 2}
+  hapticTimeline: {fileID: 11400000, guid: 79b2f7f6769f48844adf3129b201cb60, type: 2}

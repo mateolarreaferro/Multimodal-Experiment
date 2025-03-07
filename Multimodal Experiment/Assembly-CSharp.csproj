@@ -64,6 +64,7 @@
      <None Include="Assets\Others\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <Folder Include="Assets\Others\TextMesh Pro\Resources\Fonts &amp; Materials" />
      <None Include="Assets\Others\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+     <None Include="Assets\Haptics\Dog.json" />
      <None Include="Assets\Others\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <Folder Include="Assets\Others\TextMesh Pro\Resources" />
      <Folder Include="Assets\Others" />
@@ -89,6 +90,7 @@
      <Folder Include="Assets\Others\Mobile App UI Templates Pro Assets\Resources\prefabs" />
      <Folder Include="Assets\Others\Mobile App UI Templates Pro Assets\Scripts" />
      <None Include="Assets\Others\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\Haptics\Metal.json" />
      <None Include="Assets\Others\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\Others\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\Others\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />

@@ -1472,8 +1472,6 @@ MonoBehaviour:
   experimentGroup: 2
   stimuli:
   - {fileID: 11400000, guid: 1890286493b83c4468a53d08bfef4160, type: 2}
-  - {fileID: 11400000, guid: ed7dc7847d5f337409c9b7b5f730ce74, type: 2}
-  - {fileID: 11400000, guid: d2237922c23fdc943b9a3c7b6df68a03, type: 2}
   interStimulusInterval: 1.5
   videoPlayer: {fileID: 1192783759}
   audioSource: {fileID: 1192783760}
