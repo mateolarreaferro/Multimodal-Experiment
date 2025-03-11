@@ -1472,7 +1472,54 @@ MonoBehaviour:
   experimentGroup: 2
   stimuli:
   - {fileID: 11400000, guid: 1890286493b83c4468a53d08bfef4160, type: 2}
-  interStimulusInterval: 1.5
+  - {fileID: 11400000, guid: bfd3a3543b5e96642a54ad4b67a748b1, type: 2}
+  - {fileID: 11400000, guid: 37fa297ff06a5cb40a69bdf3373cfac5, type: 2}
+  - {fileID: 11400000, guid: f9a83031850b15d4bbac8e7f74b67a2d, type: 2}
+  - {fileID: 11400000, guid: 12a5436a6db0b634ca2414b455950db4, type: 2}
+  - {fileID: 11400000, guid: 8656e58fc0dce9f40889275baea8f8ac, type: 2}
+  - {fileID: 11400000, guid: 9dcfc0ced463558408362bff2186fcb4, type: 2}
+  - {fileID: 11400000, guid: cbabff25be5f5474995384abf9b0028e, type: 2}
+  - {fileID: 11400000, guid: f4bf9aa9eadc26d449181277437d93a2, type: 2}
+  - {fileID: 11400000, guid: b1537088c0e45d84b99261452b1ff9df, type: 2}
+  - {fileID: 11400000, guid: efac322c66982c448ad985ffc3cf3fe8, type: 2}
+  - {fileID: 11400000, guid: 477da8ed8f680584d87f31c10317688d, type: 2}
+  - {fileID: 11400000, guid: b65080c9704cb02448675c37c01ba037, type: 2}
+  - {fileID: 11400000, guid: 821dbbb5b9f7c964382738e28fedd566, type: 2}
+  - {fileID: 11400000, guid: 8f290c3ee771a8545809137160d506f3, type: 2}
+  - {fileID: 11400000, guid: fb99ddcbbe7f0f3419781015fff1899d, type: 2}
+  - {fileID: 11400000, guid: fc53ebb672089ef4f92314660bc37e14, type: 2}
+  - {fileID: 11400000, guid: 37c1dc940413a7142b6519426c6bbf94, type: 2}
+  - {fileID: 11400000, guid: 1c4d0f9f344af9a40a2c3edc7a6cd95f, type: 2}
+  - {fileID: 11400000, guid: 84c219cb52ebbdc4c8d106fd84121581, type: 2}
+  - {fileID: 11400000, guid: 62778891655793047a05c3417bbdf777, type: 2}
+  - {fileID: 11400000, guid: eb3f360dfeacc1248a94d151692c4037, type: 2}
+  - {fileID: 11400000, guid: ef724e2f2015f114db81a687ad86d262, type: 2}
+  - {fileID: 11400000, guid: d9d9d5374b7d5ed4dab40486b3f552bb, type: 2}
+  - {fileID: 11400000, guid: da8343f4ad2f6e14094e5b6d4a42b58c, type: 2}
+  - {fileID: 11400000, guid: c83b97df660215c44b2043187a9a6bfa, type: 2}
+  - {fileID: 11400000, guid: 13444be30ef8fca4b97c9a660098a521, type: 2}
+  - {fileID: 11400000, guid: 058b0b465b3d70f4792c86fd646f9c5b, type: 2}
+  - {fileID: 11400000, guid: ef40ca59d2d2e1540b5681220eb5740c, type: 2}
+  - {fileID: 11400000, guid: 051e376540ff4334182d014f1b6d0808, type: 2}
+  - {fileID: 11400000, guid: f9ab98958bf74e9428bce75f93817576, type: 2}
+  - {fileID: 11400000, guid: 6be3c233ef0844c4abecfce4f0014866, type: 2}
+  - {fileID: 11400000, guid: f1f6b5cf8a1d66e4382bb6fd9b8224d6, type: 2}
+  - {fileID: 11400000, guid: d9a2296fbec0a1e4cbf122255e63006f, type: 2}
+  - {fileID: 11400000, guid: 42996bcc9a7a5274e8cc9a13ac4b37ff, type: 2}
+  - {fileID: 11400000, guid: 3e4b42540f6f42c47a836515083b9486, type: 2}
+  - {fileID: 11400000, guid: 73cd52f391e0a594f9482cbe0a31135b, type: 2}
+  - {fileID: 11400000, guid: 8e62c1af7ec58fb42b3b9d240c60666e, type: 2}
+  - {fileID: 11400000, guid: 89b054c0e7ce1a14696761aa8de4d94e, type: 2}
+  - {fileID: 11400000, guid: e762f1232e3ee394d918c41076025cdd, type: 2}
+  - {fileID: 11400000, guid: 1d8ef485ad011f745b23aac835eb07f8, type: 2}
+  - {fileID: 11400000, guid: b53d8fe152330c44caf05a8fc030b3ad, type: 2}
+  - {fileID: 11400000, guid: d1d0b57a6b8645542b0205c0db625952, type: 2}
+  - {fileID: 11400000, guid: 8cb70f082d6d85e4b8250b3d563a59e9, type: 2}
+  - {fileID: 11400000, guid: 7dd081c5700ecb44e97c217dbb2eb7b1, type: 2}
+  - {fileID: 11400000, guid: f3f2080a7e4b69e449ce186125f7d053, type: 2}
+  - {fileID: 11400000, guid: 734f7725b36b27241a0e25d797afbd3c, type: 2}
+  - {fileID: 11400000, guid: e20233c89cd8ce1488dc03711f1feeae, type: 2}
+  interStimulusInterval: 0.5
   videoPlayer: {fileID: 1192783759}
   audioSource: {fileID: 1192783760}
 --- !u!1 &1710815586

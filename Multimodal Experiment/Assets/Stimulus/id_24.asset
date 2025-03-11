@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41d024d9614013d48b2f2fd50bad28ad, type: 3}
+  m_Name: id_24
+  m_EditorClassIdentifier: 
+  videoClip: {fileID: 32900000, guid: 28344d0b04454d34cb5d7529b839d767, type: 3}
+  hapticTimeline: {fileID: 11400000, guid: 758ae19e1443c2d499277a08e02cf5e9, type: 2}

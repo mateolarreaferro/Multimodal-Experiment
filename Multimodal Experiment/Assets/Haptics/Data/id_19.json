@@ -1,0 +1,40 @@
+{
+  "markers": [
+    {
+      "timeStamp": 4.554308390022676,
+      "lowFrequency": 0.5,
+      "highFrequency": 0.5,
+      "duration": 0.1
+    },
+    {
+      "timeStamp": 4.956462585034013,
+      "lowFrequency": 0.5,
+      "highFrequency": 0.5,
+      "duration": 0.1
+    },
+    {
+      "timeStamp": 5.1414058956916096,
+      "lowFrequency": 0.5,
+      "highFrequency": 0.5,
+      "duration": 0.1
+    },
+    {
+      "timeStamp": 5.264399092970521,
+      "lowFrequency": 0.5,
+      "highFrequency": 0.5,
+      "duration": 0.1
+    },
+    {
+      "timeStamp": 5.646281179138322,
+      "lowFrequency": 0.5,
+      "highFrequency": 0.5,
+      "duration": 0.1
+    },
+    {
+      "timeStamp": 6.138548752834467,
+      "lowFrequency": 0.5,
+      "highFrequency": 0.5,
+      "duration": 0.1
+    }
+  ]
+}

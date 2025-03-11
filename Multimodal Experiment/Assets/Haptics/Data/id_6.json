@@ -1,0 +1,16 @@
+{
+  "markers": [
+    {
+      "timeStamp": 0.6030839002267574,
+      "lowFrequency": 0.5,
+      "highFrequency": 0.5,
+      "duration": 0.1
+    },
+    {
+      "timeStamp": 1.1401133786848072,
+      "lowFrequency": 0.5,
+      "highFrequency": 0.5,
+      "duration": 0.1
+    }
+  ]
+}
