@@ -62,6 +62,13 @@ public class StudyManager : MonoBehaviour {
     [Header("Controller Input")]
     [SerializeField] private PS5ControllerInput ps5Controller;
 
+    [Header("Sound Effects")]
+    public AudioClip sfxA;       // Sound for button X press.
+    public AudioClip sfxB;       // Sound for button O press.
+    public AudioClip preIlpSfx;  // Sound when Pre-ILP starts.
+    public AudioClip preIpSfx;   // Sound when Pre-IP starts.
+    public AudioClip preDpSfx;   // Sound when Pre-DP starts.
+
     // List to store responses from the Immediate (IP) and Delayed (DP) test phases.
     private List<ResponseData> responses = new List<ResponseData>();
 
@@ -80,6 +87,11 @@ public class StudyManager : MonoBehaviour {
     }
 
     private void HandleStartInput() {
+        // Play the start-phase sound feedback (using sfxA, but you could choose a dedicated clip if desired).
+        if (audioSource != null && sfxA != null) {
+            audioSource.PlayOneShot(sfxA);
+        }
+
         // Unsubscribe to avoid multiple triggers.
         ps5Controller.OnStartButtonPressed -= HandleStartInput;
 
@@ -121,7 +133,8 @@ public class StudyManager : MonoBehaviour {
         }
     }
 
-    // ILP: Play only the selected stimuli (with haptics if applicable), no responses are recorded.
+    // ILP: Play only the selected stimuli (with haptics if applicable).
+    // In this updated version, we also monitor for button presses so that sfxA/sfxB are triggered during ILP.
     IEnumerator RunILP() {
         List<StimulusSO> stimuliToPlay = ILPStimuliSelector.SelectedStimuli != null ?
                                              ILPStimuliSelector.SelectedStimuli : new List<StimulusSO>();
@@ -140,6 +153,10 @@ public class StudyManager : MonoBehaviour {
                 hapticRoutine = StartCoroutine(SynchronizeHaptics(stimulus.hapticTimeline));
             }
             videoPlayer.Play();
+
+            // Start monitoring button input during ILP (without recording a response).
+            StartCoroutine(MonitorTaskInput((float)stimulus.videoClip.length));
+
             Debug.Log("ILP - Playing video: " + stimulus.videoClip.name);
             yield return new WaitForSeconds((float)stimulus.videoClip.length);
             videoPlayer.Stop();
@@ -159,7 +176,7 @@ public class StudyManager : MonoBehaviour {
     }
 
     // Test phases for Immediate (IP) and Delayed (DP) where responses are recorded.
-    // All stimuli are played in a random order.
+    // In these phases, sfxA and sfxB are played upon button press.
     IEnumerator RunTestPhase(ExperimentSection phase) {
         // Randomize the order of all stimuli.
         List<StimulusSO> testStimuli = new List<StimulusSO>(stimuli);
@@ -198,11 +215,15 @@ public class StudyManager : MonoBehaviour {
                 if (!answered && Gamepad.current != null) {
                     if (Gamepad.current.buttonSouth.wasPressedThisFrame) {
                         responseButton = "X";
+                        // Play sound effect for button X.
+                        audioSource.PlayOneShot(sfxA);
                         responseTime = Time.time - stimulusStartTime;
                         answered = true;
                         Debug.Log("User answered X at " + responseTime.ToString("F2") + " seconds");
                     } else if (Gamepad.current.buttonEast.wasPressedThisFrame) {
                         responseButton = "O";
+                        // Play sound effect for button O.
+                        audioSource.PlayOneShot(sfxB);
                         responseTime = Time.time - stimulusStartTime;
                         answered = true;
                         Debug.Log("User answered O at " + responseTime.ToString("F2") + " seconds");
@@ -305,28 +326,47 @@ public class StudyManager : MonoBehaviour {
         }
     }
 
-    // Updates UI text based on the current experiment section.
+    // This coroutine monitors button input during a task stimulus (used in ILP).
+    // It triggers sfxA for X presses and sfxB for O presses.
+    IEnumerator MonitorTaskInput(float duration) {
+        float startTime = Time.time;
+        while (Time.time - startTime < duration) {
+            if (Gamepad.current != null) {
+                if (Gamepad.current.buttonSouth.wasPressedThisFrame) {
+                    audioSource.PlayOneShot(sfxA);
+                } else if (Gamepad.current.buttonEast.wasPressedThisFrame) {
+                    audioSource.PlayOneShot(sfxB);
+                }
+            }
+            yield return null;
+        }
+    }
+    
+    // Updates UI text based on the current experiment section and plays pre-phase sound effects.
     private void AssignText() {
         switch (experimentSection) {
             case ExperimentSection.PreILP:
                 currentSectionText.text = "Pre-ILP";
-                instructionText.text = "Welcome! Determine which objects are man-made. Press X to begin the experiment.";
+                instructionText.text = "Press X to begin the experiment.";
+                if (preIlpSfx != null) audioSource.PlayOneShot(preIlpSfx);
                 break;
             case ExperimentSection.ImplicitLearningPhase:
                 currentSectionText.text = "ILP";
-                instructionText.text = "Watch the videos carefully. Press X for 'man-made' and O for 'not man-made'.";
+                instructionText.text = "Press X for 'AI-Generated' and O for 'Not AI-Generated'.";
                 break;
             case ExperimentSection.PreIP:
                 currentSectionText.text = "Pre-ITP";
                 instructionText.text = "Get ready for the next phase. Press X to begin.";
+                if (preIpSfx != null) audioSource.PlayOneShot(preIpSfx);
                 break;
             case ExperimentSection.ImmediatePhase:
                 currentSectionText.text = "ITP";
-                instructionText.text = "Decide if you have seen this video before. Press X for Yes and O for No.";
+                instructionText.text = "Press X if you've seen this video before, and O if not.";
                 break;
             case ExperimentSection.PreDP:
                 currentSectionText.text = "Pre-DTP";
-                instructionText.text = "Prepare for the final phase. Press X to begin.";
+                instructionText.text = "Wait 60 minutes. Press X to begin.";
+                if (preDpSfx != null) audioSource.PlayOneShot(preDpSfx);
                 break;
             case ExperimentSection.DelayedPhase:
                 currentSectionText.text = "DTP";
@@ -338,4 +378,6 @@ public class StudyManager : MonoBehaviour {
                 break;
         }
     }
+
 }
+

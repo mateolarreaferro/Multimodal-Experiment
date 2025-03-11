@@ -609,11 +609,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6524847843051738706, guid: 39040cd3e0bd2ab408ade608277e2514, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -303
+      value: -437
       objectReference: {fileID: 0}
     - target: {fileID: 6524847843051738706, guid: 39040cd3e0bd2ab408ade608277e2514, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 61
+      value: 163
       objectReference: {fileID: 0}
     - target: {fileID: 6524847843051738706, guid: 39040cd3e0bd2ab408ade608277e2514, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1099,7 +1099,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 686, y: -347}
+  m_AnchoredPosition: {x: 820, y: -428}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &926721871
@@ -1122,7 +1122,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pre-ITP
+  m_text: ok
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1185,7 +1185,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 61.26599, w: 0}
+  m_margin: {x: 0, y: 0, z: 44.328857, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1469,9 +1469,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc117b1bcc04fbf44aa9b8af933ea740, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  participantName: MD
+  participantName: ML
   experimentGroup: 2
-  experimentSection: 0
+  experimentSection: 4
   stimuli:
   - {fileID: 11400000, guid: 1890286493b83c4468a53d08bfef4160, type: 2}
   - {fileID: 11400000, guid: bfd3a3543b5e96642a54ad4b67a748b1, type: 2}
@@ -1526,6 +1526,11 @@ MonoBehaviour:
   currentSectionText: {fileID: 926721871}
   instructionText: {fileID: 1710815588}
   ps5Controller: {fileID: 1934353779}
+  sfxA: {fileID: 8300000, guid: a5c650921243b634596581366c3cd8fe, type: 3}
+  sfxB: {fileID: 8300000, guid: d6ea469591a705244b726d2be27a4591, type: 3}
+  preIlpSfx: {fileID: 8300000, guid: f0d24d5451900e248b8cb58203c02f3e, type: 3}
+  preIpSfx: {fileID: 8300000, guid: 3f5289f9273a12b48a0b4024b5da4daa, type: 3}
+  preDpSfx: {fileID: 8300000, guid: ff888d75d46679c488b6e9f3f2d9c511, type: 3}
 --- !u!1 &1710815586
 GameObject:
   m_ObjectHideFlags: 0
@@ -1560,7 +1565,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -213, y: 93}
+  m_AnchoredPosition: {x: -145, y: 403}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1710815588
