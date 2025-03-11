@@ -13,11 +13,15 @@ MonoBehaviour:
   m_Name: id_41
   m_EditorClassIdentifier: 
   markers:
+  - timeStamp: 0.3
+    lowFrequency: 0.5
+    highFrequency: 0.5
+    duration: 0.1
   - timeStamp: 1.3065532
     lowFrequency: 0.5
     highFrequency: 0.5
     duration: 0.1
-  - timeStamp: 1.7067801
+  - timeStamp: 1.70678
     lowFrequency: 0.5
     highFrequency: 0.5
     duration: 0.1

@@ -1471,9 +1471,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   experimentGroup: 2
   stimuli:
-  - {fileID: 11400000, guid: d9a2296fbec0a1e4cbf122255e63006f, type: 2}
+  - {fileID: 11400000, guid: 1890286493b83c4468a53d08bfef4160, type: 2}
   - {fileID: 11400000, guid: bfd3a3543b5e96642a54ad4b67a748b1, type: 2}
-  - {fileID: 11400000, guid: 37fa297ff06a5cb40a69bdf3373cfac5, type: 2}
   - {fileID: 11400000, guid: f9a83031850b15d4bbac8e7f74b67a2d, type: 2}
   - {fileID: 11400000, guid: 12a5436a6db0b634ca2414b455950db4, type: 2}
   - {fileID: 11400000, guid: 8656e58fc0dce9f40889275baea8f8ac, type: 2}

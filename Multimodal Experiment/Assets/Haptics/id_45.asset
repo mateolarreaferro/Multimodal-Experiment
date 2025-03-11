@@ -25,3 +25,7 @@ MonoBehaviour:
     lowFrequency: 0.5
     highFrequency: 0.5
     duration: 0.1
+  - timeStamp: 0.5
+    lowFrequency: 0.1
+    highFrequency: 0.2
+    duration: 2.4
