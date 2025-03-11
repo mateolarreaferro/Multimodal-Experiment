@@ -88,8 +88,10 @@
      <None Include="Assets\Others\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\Haptics\Data\id_19.json" />
      <Folder Include="Assets\Others\TextMesh Pro" />
+     <Folder Include="Assets\Results" />
      <None Include="Assets\Haptics\Data\id_11.json" />
      <None Include="Assets\Haptics\Data\id_12.json" />
+     <None Include="Assets\Results\MD_results_DP.json" />
      <None Include="Assets\Others\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\Haptics\Data\id_39.json" />
      <None Include="Assets\Haptics\Data\id_36.json" />
@@ -125,6 +127,7 @@
      <None Include="Assets\Haptics\Data\id_16.json" />
      <None Include="Assets\Others\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\Haptics\Data\id_15.json" />
+     <None Include="Assets\Results\MD_results_IP.json" />
      <None Include="Assets\Others\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\Haptics\Data\id_27.json" />
      <None Include="Assets\Haptics\Data\id_1.json" />

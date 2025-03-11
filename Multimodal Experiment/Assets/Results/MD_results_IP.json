@@ -1,0 +1,286 @@
+{
+    "responses": [
+        {
+            "stimulusId": "id_34",
+            "phase": "IP",
+            "isCorrect": "Incorrect",
+            "responseTime": "0.00"
+        },
+        {
+            "stimulusId": "id_22",
+            "phase": "IP",
+            "isCorrect": "Correct",
+            "responseTime": "1.49"
+        },
+        {
+            "stimulusId": "id_45",
+            "phase": "IP",
+            "isCorrect": "Incorrect",
+            "responseTime": "1.33"
+        },
+        {
+            "stimulusId": "id_13",
+            "phase": "IP",
+            "isCorrect": "Incorrect",
+            "responseTime": "1.09"
+        },
+        {
+            "stimulusId": "id_6",
+            "phase": "IP",
+            "isCorrect": "Correct",
+            "responseTime": "1.12"
+        },
+        {
+            "stimulusId": "id_29",
+            "phase": "IP",
+            "isCorrect": "Incorrect",
+            "responseTime": "0.23"
+        },
+        {
+            "stimulusId": "id_41",
+            "phase": "IP",
+            "isCorrect": "Incorrect",
+            "responseTime": "0.23"
+        },
+        {
+            "stimulusId": "id_9",
+            "phase": "IP",
+            "isCorrect": "Correct",
+            "responseTime": "0.30"
+        },
+        {
+            "stimulusId": "id_15",
+            "phase": "IP",
+            "isCorrect": "Correct",
+            "responseTime": "0.78"
+        },
+        {
+            "stimulusId": "id_23",
+            "phase": "IP",
+            "isCorrect": "Correct",
+            "responseTime": "0.85"
+        },
+        {
+            "stimulusId": "id_1",
+            "phase": "IP",
+            "isCorrect": "Incorrect",
+            "responseTime": "0.37"
+        },
+        {
+            "stimulusId": "id_38",
+            "phase": "IP",
+            "isCorrect": "Correct",
+            "responseTime": "0.58"
+        },
+        {
+            "stimulusId": "id_40",
+            "phase": "IP",
+            "isCorrect": "Correct",
+            "responseTime": "0.45"
+        },
+        {
+            "stimulusId": "id_17",
+            "phase": "IP",
+            "isCorrect": "Correct",
+            "responseTime": "0.52"
+        },
+        {
+            "stimulusId": "id_27",
+            "phase": "IP",
+            "isCorrect": "Correct",
+            "responseTime": "0.38"
+        },
+        {
+            "stimulusId": "id_42",
+            "phase": "IP",
+            "isCorrect": "Incorrect",
+            "responseTime": "0.38"
+        },
+        {
+            "stimulusId": "id_30",
+            "phase": "IP",
+            "isCorrect": "Incorrect",
+            "responseTime": "0.21"
+        },
+        {
+            "stimulusId": "id_31",
+            "phase": "IP",
+            "isCorrect": "Correct",
+            "responseTime": "0.43"
+        },
+        {
+            "stimulusId": "id_25",
+            "phase": "IP",
+            "isCorrect": "Incorrect",
+            "responseTime": "0.72"
+        },
+        {
+            "stimulusId": "id_12",
+            "phase": "IP",
+            "isCorrect": "Correct",
+            "responseTime": "0.38"
+        },
+        {
+            "stimulusId": "id_44",
+            "phase": "IP",
+            "isCorrect": "Incorrect",
+            "responseTime": "0.29"
+        },
+        {
+            "stimulusId": "id_10",
+            "phase": "IP",
+            "isCorrect": "Correct",
+            "responseTime": "0.42"
+        },
+        {
+            "stimulusId": "id_46",
+            "phase": "IP",
+            "isCorrect": "Correct",
+            "responseTime": "0.39"
+        },
+        {
+            "stimulusId": "id_18",
+            "phase": "IP",
+            "isCorrect": "Incorrect",
+            "responseTime": "0.62"
+        },
+        {
+            "stimulusId": "id_7",
+            "phase": "IP",
+            "isCorrect": "Correct",
+            "responseTime": "0.33"
+        },
+        {
+            "stimulusId": "id_20",
+            "phase": "IP",
+            "isCorrect": "Correct",
+            "responseTime": "0.41"
+        },
+        {
+            "stimulusId": "id_11",
+            "phase": "IP",
+            "isCorrect": "Correct",
+            "responseTime": "0.45"
+        },
+        {
+            "stimulusId": "id_19",
+            "phase": "IP",
+            "isCorrect": "Incorrect",
+            "responseTime": "0.33"
+        },
+        {
+            "stimulusId": "id_33",
+            "phase": "IP",
+            "isCorrect": "Incorrect",
+            "responseTime": "0.53"
+        },
+        {
+            "stimulusId": "id_16",
+            "phase": "IP",
+            "isCorrect": "Correct",
+            "responseTime": "0.49"
+        },
+        {
+            "stimulusId": "id_32",
+            "phase": "IP",
+            "isCorrect": "Correct",
+            "responseTime": "0.61"
+        },
+        {
+            "stimulusId": "id_47",
+            "phase": "IP",
+            "isCorrect": "Correct",
+            "responseTime": "0.60"
+        },
+        {
+            "stimulusId": "id_39",
+            "phase": "IP",
+            "isCorrect": "Correct",
+            "responseTime": "0.45"
+        },
+        {
+            "stimulusId": "id_2",
+            "phase": "IP",
+            "isCorrect": "Correct",
+            "responseTime": "0.41"
+        },
+        {
+            "stimulusId": "id_24",
+            "phase": "IP",
+            "isCorrect": "Incorrect",
+            "responseTime": "0.67"
+        },
+        {
+            "stimulusId": "id_14",
+            "phase": "IP",
+            "isCorrect": "Correct",
+            "responseTime": "0.48"
+        },
+        {
+            "stimulusId": "id_36",
+            "phase": "IP",
+            "isCorrect": "Correct",
+            "responseTime": "0.71"
+        },
+        {
+            "stimulusId": "id_21",
+            "phase": "IP",
+            "isCorrect": "Correct",
+            "responseTime": "0.55"
+        },
+        {
+            "stimulusId": "id_5",
+            "phase": "IP",
+            "isCorrect": "Incorrect",
+            "responseTime": "0.33"
+        },
+        {
+            "stimulusId": "id_35",
+            "phase": "IP",
+            "isCorrect": "Incorrect",
+            "responseTime": "0.59"
+        },
+        {
+            "stimulusId": "id_8",
+            "phase": "IP",
+            "isCorrect": "Incorrect",
+            "responseTime": "0.33"
+        },
+        {
+            "stimulusId": "id_4",
+            "phase": "IP",
+            "isCorrect": "Incorrect",
+            "responseTime": "0.34"
+        },
+        {
+            "stimulusId": "id_28",
+            "phase": "IP",
+            "isCorrect": "Incorrect",
+            "responseTime": "0.36"
+        },
+        {
+            "stimulusId": "id_43",
+            "phase": "IP",
+            "isCorrect": "Incorrect",
+            "responseTime": "0.54"
+        },
+        {
+            "stimulusId": "id_26",
+            "phase": "IP",
+            "isCorrect": "Incorrect",
+            "responseTime": "0.47"
+        },
+        {
+            "stimulusId": "id_48",
+            "phase": "IP",
+            "isCorrect": "Correct",
+            "responseTime": "0.36"
+        },
+        {
+            "stimulusId": "id_37",
+            "phase": "IP",
+            "isCorrect": "Correct",
+            "responseTime": "0.35"
+        }
+    ]
+}

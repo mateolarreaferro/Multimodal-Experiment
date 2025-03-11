@@ -7,7 +7,6 @@ using UnityEngine.Video;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-// Data classes for storing responses.
 [System.Serializable]
 public class ResponseData {
     public string stimulusId;   // e.g., video clip name.
@@ -20,7 +19,6 @@ public class ResponseData {
 public class TestResults {
     public List<ResponseData> responses;
 }
-
 
 public enum ExperimentGroup {
     Unimodal,   // Video only (mute audio)
@@ -62,7 +60,6 @@ public class StudyManager : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI instructionText;
     
     [Header("Controller Input")]
-    // Reference to the PS5ControllerInput component (logic is in its own script).
     [SerializeField] private PS5ControllerInput ps5Controller;
 
     // List to store responses from the Immediate (IP) and Delayed (DP) test phases.
@@ -72,7 +69,7 @@ public class StudyManager : MonoBehaviour {
         // Set the UI text based on the current experiment section.
         AssignText();
 
-        // For pre-phase screens, wait for the user to press the X button.
+        // For pre-phase screens, wait for the user to press the start button.
         if (experimentSection == ExperimentSection.PreILP ||
             experimentSection == ExperimentSection.PreIP ||
             experimentSection == ExperimentSection.PreDP) {
@@ -155,7 +152,7 @@ public class StudyManager : MonoBehaviour {
             yield return new WaitForSeconds(interStimulusInterval);
         }
         Debug.Log("Implicit Learning Phase complete.");
-        // Automatically transition to Pre-Immediate Test Phase.
+        // Transition to Pre-Immediate Test Phase.
         experimentSection = ExperimentSection.PreIP;
         AssignText();
         ps5Controller.OnStartButtonPressed += HandleStartInput;
@@ -188,8 +185,7 @@ public class StudyManager : MonoBehaviour {
                 hapticRoutine = StartCoroutine(SynchronizeHaptics(stimulus.hapticTimeline));
             }
             videoPlayer.Play();
-            Debug.Log($"{(phase == ExperimentSection.ImmediatePhase ? "Immediate" : "Delayed")} Phase - Playing video: " + stimulus.videoClip.name);
-            
+
             // Use the clip's duration as the response window.
             float clipDuration = (float)videoPlayer.clip.length;
             float stimulusStartTime = Time.time;
@@ -204,10 +200,12 @@ public class StudyManager : MonoBehaviour {
                         responseButton = "X";
                         responseTime = Time.time - stimulusStartTime;
                         answered = true;
+                        Debug.Log("User answered X at " + responseTime.ToString("F2") + " seconds");
                     } else if (Gamepad.current.buttonEast.wasPressedThisFrame) {
                         responseButton = "O";
                         responseTime = Time.time - stimulusStartTime;
                         answered = true;
+                        Debug.Log("User answered O at " + responseTime.ToString("F2") + " seconds");
                     }
                 }
                 yield return null;
@@ -239,25 +237,48 @@ public class StudyManager : MonoBehaviour {
 
             yield return new WaitForSeconds(interStimulusInterval);
         }
-        Debug.Log($"{(phase == ExperimentSection.ImmediatePhase ? "Immediate" : "Delayed")} test phase complete.");
-        // Transition: from Immediate Test to Pre-Delayed Test, or if Delayed Test, write results.
+        
+        // Print all results in the console.
+        Debug.Log("Test Phase " + ((phase == ExperimentSection.ImmediatePhase) ? "Immediate" : "Delayed") + " complete. Results:");
+        foreach (ResponseData res in responses) {
+            Debug.Log("Stimulus: " + res.stimulusId + ", Phase: " + res.phase + ", Correct: " + res.isCorrect + ", Response Time: " + res.responseTime);
+        }
+        
+        // Write results after completing this test phase.
         if (phase == ExperimentSection.ImmediatePhase) {
+            WriteResultsToFile("IP");
+            // Transition to Pre-Delayed Test Phase.
             experimentSection = ExperimentSection.PreDP;
             AssignText();
             ps5Controller.OnStartButtonPressed += HandleStartInput;
         } else if (phase == ExperimentSection.DelayedPhase) {
-            WriteResultsToFile();
+            WriteResultsToFile("DP");
         }
     }
 
-    // Writes the responses to a JSON file named after the participant.
-    void WriteResultsToFile() {
+    // Writes the responses to a JSON file in the Assets/Results folder with a suffix indicating the phase.
+    void WriteResultsToFile(string phaseSuffix) {
         TestResults testResults = new TestResults();
         testResults.responses = responses;
         string json = JsonUtility.ToJson(testResults, true);
-        string filePath = Application.persistentDataPath + "/" + participantName + "_results.json";
-        File.WriteAllText(filePath, json);
-        Debug.Log("Results written to: " + filePath);
+
+        // Create a folder named "Results" inside Assets if it doesn't exist.
+        string folderPath = Application.dataPath + "/Results";
+        if (!Directory.Exists(folderPath)) {
+            Directory.CreateDirectory(folderPath);
+            Debug.Log("Created folder: " + folderPath);
+        }
+        string filePath = folderPath + "/" + participantName + "_results_" + phaseSuffix + ".json";
+        
+        try {
+            File.WriteAllText(filePath, json);
+            Debug.Log("Results successfully written to: " + filePath);
+            #if UNITY_EDITOR
+            UnityEditor.AssetDatabase.Refresh();
+            #endif
+        } catch (System.Exception e) {
+            Debug.LogError("Error writing results: " + e.Message);
+        }
     }
 
     // Haptic synchronization coroutine.
@@ -267,11 +288,9 @@ public class StudyManager : MonoBehaviour {
         while (videoPlayer.isPlaying && markerIndex < timeline.markers.Length) {
             float currentTime = (float)videoPlayer.time;
             HapticMarker marker = timeline.markers[markerIndex];
-            Debug.Log($"[Haptic Sync] Current Time: {currentTime:F2}s, Marker Time: {marker.timeStamp:F2}s, Marker Index: {markerIndex}");
             if (currentTime >= marker.timeStamp) {
                 if (Gamepad.current != null) {
                     Gamepad.current.SetMotorSpeeds(marker.lowFrequency, marker.highFrequency);
-                    Debug.Log($"[Haptic Trigger] Activating haptics at {marker.timeStamp:F2}s");
                 } else {
                     Debug.LogWarning("[Haptic Sync] No gamepad detected!");
                 }
@@ -284,7 +303,6 @@ public class StudyManager : MonoBehaviour {
                 yield return null;
             }
         }
-        Debug.Log("[Haptic Sync] Finished processing haptic timeline.");
     }
 
     // Updates UI text based on the current experiment section.
@@ -312,7 +330,7 @@ public class StudyManager : MonoBehaviour {
                 break;
             case ExperimentSection.DelayedPhase:
                 currentSectionText.text = "DTP";
-                instructionText.text = "Was this video in the initial phase?. Press X for Yes and O for No.";
+                instructionText.text = "Was this video in the initial phase? Press X for Yes and O for No.";
                 break;
             default:
                 currentSectionText.text = "Experiment Section";
