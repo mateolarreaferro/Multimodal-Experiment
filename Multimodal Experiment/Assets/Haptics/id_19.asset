@@ -13,27 +13,27 @@ MonoBehaviour:
   m_Name: id_19
   m_EditorClassIdentifier: 
   markers:
-  - timeStamp: 4.5543084
+  - timeStamp: 0
     lowFrequency: 0.5
     highFrequency: 0.5
-    duration: 0.1
-  - timeStamp: 4.9564624
+    duration: 0.6
+  - timeStamp: 0.7
     lowFrequency: 0.5
     highFrequency: 0.5
-    duration: 0.1
-  - timeStamp: 5.141406
+    duration: 0.5
+  - timeStamp: 1.5
     lowFrequency: 0.5
     highFrequency: 0.5
-    duration: 0.1
-  - timeStamp: 5.264399
+    duration: 0.5
+  - timeStamp: 2.1
     lowFrequency: 0.5
     highFrequency: 0.5
-    duration: 0.1
-  - timeStamp: 5.6462812
+    duration: 0.4
+  - timeStamp: 2.7
     lowFrequency: 0.5
     highFrequency: 0.5
-    duration: 0.1
-  - timeStamp: 6.138549
+    duration: 0.3
+  - timeStamp: 3
     lowFrequency: 0.5
     highFrequency: 0.5
     duration: 0.1
