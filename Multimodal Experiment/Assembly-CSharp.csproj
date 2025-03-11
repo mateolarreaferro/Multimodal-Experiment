@@ -47,8 +47,10 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\StudyManager.cs" />
      <Compile Include="Assets\Others\Mobile App UI Templates Pro Assets\Scripts\SliderText.cs" />
+     <Compile Include="Assets\Scripts\ILPStimuliSelector.cs" />
      <Compile Include="Assets\Scripts\HapticTester.cs" />
      <Compile Include="Assets\Others\Mobile App UI Templates Pro Assets\Scripts\QuantityCounter.cs" />
+     <Compile Include="Assets\Scripts\PS5ControllerInput.cs" />
      <Compile Include="Assets\Scripts\StimulusSO.cs" />
      <Compile Include="Assets\Others\Mobile App UI Templates Pro Assets\Scripts\SliderToggle.cs" />
      <Compile Include="Assets\Scripts\HapticTimelineSO.cs" />

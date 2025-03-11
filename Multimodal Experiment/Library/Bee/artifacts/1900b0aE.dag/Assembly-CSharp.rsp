@@ -364,6 +364,8 @@
 "Assets/Others/Mobile App UI Templates Pro Assets/Scripts/SliderToggle.cs"
 "Assets/Scripts/HapticTester.cs"
 "Assets/Scripts/HapticTimelineSO.cs"
+"Assets/Scripts/ILPStimuliSelector.cs"
+"Assets/Scripts/PS5ControllerInput.cs"
 "Assets/Scripts/StimulusSO.cs"
 "Assets/Scripts/StudyManager.cs"
 -langversion:9.0
